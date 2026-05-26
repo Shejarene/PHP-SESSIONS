@@ -55,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
     <div class="container">
-        <h2>Register</h2>
+        <h2>Create <span class="highlight-text">Account</span></h2>
         <?php if ($message): ?>
             <div class="success"><?php echo $message; ?></div>
         <?php endif; ?>
@@ -65,19 +65,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <form action="register.php" method="POST">
             <div class="form-group">
                 <label for="fullname">Full Name</label>
-                <input type="text" id="fullname" name="fullname" minlength="3" pattern="^[A-Za-z\s]+$" title="Only letters and spaces are allowed" required>
+                <input type="text" id="fullname" name="fullname" minlength="3" pattern="^[A-Za-z\s]+$" title="Only letters and spaces are allowed" placeholder="John Doe" required>
             </div>
             <div class="form-group">
                 <label for="address">Address</label>
-                <textarea id="address" name="address" minlength="5" required></textarea>
+                <textarea id="address" name="address" minlength="5" placeholder="123 Modern Street, City, Country" required></textarea>
             </div>
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" placeholder="john@example.com" required>
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" minlength="6" required>
+                <input type="password" id="password" name="password" minlength="6" placeholder="At least 6 characters" required>
             </div>
             <button type="submit">Register</button>
         </form>

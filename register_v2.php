@@ -70,8 +70,8 @@ try {
 </head>
 <body>
     <div class="container">
-        <h2>Register (System V2)</h2>
-        <p style="color: green; font-size: 12px; text-align: center;">Database: authentication_system is ready.</p>
+        <h2><span class="highlight-text">Register</span> (System V2)</h2>
+        <p style="color: #22c55e; font-size: 12px; text-align: center; font-weight: 600;">Database: authentication_system is ready.</p>
         <?php if ($message): ?>
             <div class="success"><?php echo $message; ?></div>
         <?php endif; ?>
@@ -81,19 +81,19 @@ try {
         <form action="register_v2.php" method="POST">
             <div class="form-group">
                 <label for="fullname">Full Name</label>
-                <input type="text" id="fullname" name="fullname" minlength="3" pattern="^[A-Za-z\s]+$" title="Only letters and spaces are allowed" required>
+                <input type="text" id="fullname" name="fullname" minlength="3" pattern="^[A-Za-z\s]+$" title="Only letters and spaces are allowed" placeholder="John Doe" required>
             </div>
             <div class="form-group">
                 <label for="address">Address</label>
-                <textarea id="address" name="address" minlength="5" required></textarea>
+                <textarea id="address" name="address" minlength="5" placeholder="Enter your full address..." required></textarea>
             </div>
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" placeholder="john@example.com" required>
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" minlength="6" required>
+                <input type="password" id="password" name="password" minlength="6" placeholder="Enter a secure password" required>
             </div>
             <button type="submit">Register</button>
         </form>

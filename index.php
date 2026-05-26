@@ -18,16 +18,16 @@ if (!isset($_SESSION['user_id'])) {
 </head>
 <body class="dashboard-page-body">
     <nav class="navbar">
-        <div class="nav-brand">AuthSystem</div>
+        <div class="nav-brand"><span class="highlight-text">Auth</span>System</div>
         <div class="nav-links">
-            <span>Welcome, <?php echo htmlspecialchars($_SESSION['fullname']); ?></span>
+            <span>Welcome, <span class="highlight-text"><?php echo htmlspecialchars($_SESSION['fullname']); ?></span></span>
             <a href="logout.php" class="btn-logout">Logout</a>
         </div>
     </nav>
 
     <div class="dashboard-container">
         <header class="dashboard-header">
-            <h1>User Dashboard</h1>
+            <h1>User <span class="highlight-text">Dashboard</span></h1>
             <p>You are successfully logged in!</p>
         </header>
 
